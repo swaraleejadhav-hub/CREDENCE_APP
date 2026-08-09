@@ -1,16 +1,19 @@
 {
     "validUser": {
         "username": "admin",
-        "password": "admin"
+        "password": "admin",
+        "theme": "nature"
     },
 
     "invalidUser": {
         "username": "admin123",
-        "password": "admin123"
+        "password": "admin123",
+        "theme": "blue"
     },
 
     "blankUser": {
         "username": "",
-        "password": ""
+        "password": "",
+        "theme": "blue"
     }
 }
