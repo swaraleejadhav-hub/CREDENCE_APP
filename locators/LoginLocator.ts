@@ -6,6 +6,7 @@ export class LoginLocator {
   readonly themeDrodown: Locator;
   readonly loginButton: Locator;
   readonly welcomeMessage: Locator;
+  readonly invalidCredencialMessage: Locator;
 
   constructor(page: Page) {
     this.username = page.locator("input[name='user_name']");
@@ -13,5 +14,6 @@ export class LoginLocator {
     this.themeDrodown = page.locator("select[name='login_theme']");
     this.loginButton = page.locator("input[name='Login']");
     this.welcomeMessage = page.getByText('Welcome admin');
+    this.invalidCredencialMessage = page.getByText('You must specify a valid username and password.');
   }
 }

@@ -3,7 +3,7 @@ import { LoginPage } from '../pages/LoginPage';
 import loginData from '../login-data/login.json';
 import { LoginLocator } from '../locators/LoginLocator';
 
-test('VTiger Login Test', async( {page}) => {
+test('VTiger Valid Login Credencials', async( {page}) => {
     const loginPage = new LoginPage(page);
     const loginLocator = new LoginLocator(page);
 
@@ -16,4 +16,19 @@ test('VTiger Login Test', async( {page}) => {
     )
 
     await expect(loginLocator.welcomeMessage).toHaveText('Welcome admin');
+})
+
+test('VTiger Invalid Login Test', async( {page}) => {
+    const loginPage = new LoginPage(page);
+    const loginLocator = new LoginLocator(page);
+
+    await page.goto('/');
+
+    await loginPage.login(
+        loginData.invalidUser.username,
+        loginData.invalidUser.password,
+        loginData.invalidUser.theme
+    )
+
+    await expect(loginLocator.invalidCredencialMessage).toContainText('You must specify a valid username and password.')
 })

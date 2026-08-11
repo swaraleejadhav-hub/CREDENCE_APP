@@ -18,16 +18,16 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "projects": [
       {
         "outputDir": "C:/Users/Sanket/Desktop/Credence App/CREDENCE_APP/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "chromium",
         "name": "chromium",
@@ -76,7 +76,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "VTiger Login Test",
+          "title": "VTiger Valid Login Credencials",
           "ok": true,
           "tags": [],
           "tests": [
@@ -91,12 +91,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2441,
+                  "duration": 4856,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-09T10:54:01.531Z",
+                  "startTime": "2026-08-11T01:59:08.248Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -104,9 +104,43 @@
               "status": "expected"
             }
           ],
-          "id": "42af536f2c838a173cb6-3e85200f3d76d7eca1c3",
+          "id": "42af536f2c838a173cb6-40846f8556e6589391e5",
           "file": "Login.spec.ts",
           "line": 6,
+          "column": 5
+        },
+        {
+          "title": "VTiger Invalid Login Test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3544,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-11T01:59:08.237Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "42af536f2c838a173cb6-f3ea10b07f2a7f3cb3e5",
+          "file": "Login.spec.ts",
+          "line": 21,
           "column": 5
         }
       ]
@@ -114,9 +148,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-09T10:54:00.780Z",
-    "duration": 4098.7339999999995,
-    "expected": 1,
+    "startTime": "2026-08-11T01:59:07.028Z",
+    "duration": 7041.723,
+    "expected": 2,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
